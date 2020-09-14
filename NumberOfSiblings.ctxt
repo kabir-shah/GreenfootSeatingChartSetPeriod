@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=NumberOfSiblings
+comment0.text=\n\ The\ interface\ NumberOfSiblings\ creates\ public\ intergers.\n\n\ @author\ Period\ 3\n\ @version\ 1.0\n
+comment1.params=
+comment1.target=int\ numberOfSiblings()
+comment2.params=
+comment2.target=int\ numberOfBrothers()
+comment3.params=
+comment3.target=int\ numberOfSisters()
+numComments=4

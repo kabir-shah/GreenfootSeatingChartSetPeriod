@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=StudentAthlete
+comment0.text=\n\ The\ interface\ StudentAthlete\ creates\ a\ sentence\ about\ the\ student's\ athletics.\n\n\ @author\ Period\ 3\n\ @version\ 1.0\n
+comment1.params=mySportSentence
+comment1.target=void\ mySport(java.lang.String)
+numComments=2
