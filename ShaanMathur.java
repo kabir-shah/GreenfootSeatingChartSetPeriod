@@ -21,11 +21,12 @@ public class ShaanMathur extends LoopGroup implements NumberOfSiblings, SpecialI
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public ShaanMathur(String f, String l, int r, int s) {
+    public ShaanMathur(String f, String l, int r, int s, int p) {
         firstName=f;
         lastName=l;
         myRow=r;
         mySeat=s;
+        period=p;
         portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";   
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  
@@ -42,6 +43,7 @@ public class ShaanMathur extends LoopGroup implements NumberOfSiblings, SpecialI
         lastName="Trout";
         myRow=1;
         mySeat=1;
+        period=2;
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
