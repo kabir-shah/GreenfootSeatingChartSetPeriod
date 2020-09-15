@@ -25,11 +25,12 @@ public class RohanGovindarajan extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public RohanGovindarajan(String f, String l, int r, int s) {
+    public RohanGovindarajan(String f, String l, int r, int s, int p) {
         firstName=f;
         lastName=l;
         myRow=r;
         mySeat=s;
+        period = p;
         portraitFile=f.toLowerCase()+l.toLowerCase()+".png";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         setImage(portraitFile);
@@ -46,6 +47,7 @@ public class RohanGovindarajan extends Student implements SpecialInterestOrHobby
         lastName="Govindarajan";
         myRow=5;
         mySeat=5;
+        period = 3;
         // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
