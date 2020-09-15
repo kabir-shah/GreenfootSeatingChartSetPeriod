@@ -22,9 +22,11 @@ public class Classroom extends World
 
         super(10, 6, 130);
         
-        addObject(new TogglePeriodBtn(), 0, 0);
+        TogglePeriodBtn btn = new TogglePeriodBtn();
         prepare();
-        setPeriod();
+        setPeriod(btn.getCurrentPeriod());
+        
+        addObject(btn, 0, 0);
     }
     
     /**
@@ -61,10 +63,7 @@ public class Classroom extends World
         students = getObjects(Student.class);
     }
     
-    private void setPeriod() {
-        // Get the current period from the toggle button.
-        int currentPeriod = getObject(TogglePeriodBtn.class).getCurrentPeriod();
-
+    public void setPeriod(int currentPeriod) {
         // Iterate through all students, removing them if they aren’t in the
         // current period and adding them if they are.
         for (Student student : students) {

@@ -9,13 +9,16 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TogglePeriodBtn extends Actor
 {
     private int currentPeriod;
+    
     public TogglePeriodBtn() {
         currentPeriod = 3;
         setImage("images/period3.jpg");
     }
+    
     public int getCurrentPeriod() {
     	return currentPeriod;
     }
+    
     public void act() {
         if (Greenfoot.mousePressed(this)) {
         	if (currentPeriod == 3) {
@@ -26,7 +29,7 @@ public class TogglePeriodBtn extends Actor
         		currentPeriod = 3;
         		setImage("images/period3.jpg");
         	}
-        	//getWorld().setPeriod(currentPeriod);
+        	((Classroom) getWorld()).setPeriod(currentPeriod);
         }
     }
 
