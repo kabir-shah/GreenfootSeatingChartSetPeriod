@@ -11,7 +11,7 @@ public class Classroom extends World
 {
     // Hold a list of all students.
     private List<Student> students;
-    
+
     /**
      * Constructor for objects of class Classroom.
      *
@@ -21,14 +21,14 @@ public class Classroom extends World
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
 
         super(10, 6, 130);
-        
+
         TogglePeriodBtn btn = new TogglePeriodBtn();
+        addObject(btn, 0, 0);
+
         prepare();
         setPeriod(btn.getCurrentPeriod());
-        
-        addObject(btn, 0, 0);
     }
-    
+
     /**
      * Prepare the world for the start of the program. That is: create the initial
      * objects and add them to the world.
@@ -47,22 +47,22 @@ public class Classroom extends World
         RohanGovindarajan rohangovindarajan = new RohanGovindarajan("rohan", "govindarajan", 3, 2, 3);
         addObject(rohangovindarajan, 3, 2);
         rohangovindarajan.sitDown();
-        
+
         TanishB tanishbaranwal = new TanishB("Tanish", "Baranwal", 4, 1, 2);
         addObject(tanishbaranwal, 4, 1);
         tanishbaranwal.sitDown();
-  
+
         ShaanMathur shaanmathur = new ShaanMathur("Shaan", "Mathur", 2, 1, 2);
         addObject(shaanmathur, 2, 1);
         shaanmathur.sitDown();
-        
+
         KeenanKalra keenankalra = new KeenanKalra("Keenan", "Kalra", 2, 2, 3);
         addObject(keenankalra, 2, 2);
         keenankalra.sitDown();
-        
+
         students = getObjects(Student.class);
     }
-    
+
     public void setPeriod(int currentPeriod) {
         // Iterate through all students, removing them if they aren’t in the
         // current period and adding them if they are.
