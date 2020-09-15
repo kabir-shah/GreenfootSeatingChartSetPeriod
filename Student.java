@@ -28,6 +28,10 @@ public abstract class Student extends Actor
    public String dancingFile;
    public String soundDanceFile;
    public String soundFileAYR;
+   // declare period as an integer
+   protected int period;
+   
+
    Classroom clas = (Classroom) getWorld();
    public void setRow(int r){
        myRow=r;
@@ -36,7 +40,7 @@ public abstract class Student extends Actor
        mySeat=s;
     }
 
-    public abstract void  getName(); //This is an abstract methods. You will have to implement it
+   public abstract void  getName(); //This is an abstract methods. You will have to implement it
                                      // in your own class file. See KilgoreTrout for an example
    public abstract void  provideLesson(); // each group should implement their own version of this method.
                                            // See the notes in the assignment instructions for possible implementation.
@@ -49,7 +53,16 @@ public abstract class Student extends Actor
      * Plays a sound file when called
      * @param String myNameFile  is the name of the sound file to play, ex "mySound.wav",
      */
-
+   
+   // set period to desired choice, each student file will have to set their respective period
+   public void setPeriod(int p) {
+     period = p;
+   }
+   // returns the period integer for each student
+   public int getPeriod() {
+       return period;
+   }
+   
     public int GetRow(){
         return myRow;
     }
@@ -57,7 +70,7 @@ public abstract class Student extends Actor
     public int GetSeat(){
         return mySeat;
     }
-
+     
     public void sayName(String myNameFile){
         Greenfoot.playSound(myNameFile);
     }
