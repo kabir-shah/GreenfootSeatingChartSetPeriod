@@ -34,27 +34,27 @@ public class Classroom extends World
 
      private void prepare()
     {
-        KabirShah kabirShah = new KabirShah("Kabir", "Shah", 1, 1);
+        KabirShah kabirShah = new KabirShah("Kabir", "Shah", 1, 1, 3);
         addObject(kabirShah, 1, 1);
         kabirShah.sitDown();
 
-        OlegBychenkov olegbychenkov = new OlegBychenkov("Oleg", "Bychenkov", 1, 2);
+        OlegBychenkov olegbychenkov = new OlegBychenkov("Oleg", "Bychenkov", 1, 2, 3);
         addObject(olegbychenkov, 1, 2);
         olegbychenkov.sitDown();
 
-        RohanGovindarajan rohangovindarajan = new RohanGovindarajan("rohan", "govindarajan", 3, 2);
+        RohanGovindarajan rohangovindarajan = new RohanGovindarajan("rohan", "govindarajan", 3, 2, 3);
         addObject(rohangovindarajan, 3, 2);
         rohangovindarajan.sitDown();
         
-        TanishB tanishbaranwal = new TanishB("Tanish", "Baranwal", 4, 1);
+        TanishB tanishbaranwal = new TanishB("Tanish", "Baranwal", 4, 1, 2);
         addObject(tanishbaranwal, 4, 1);
         tanishbaranwal.sitDown();
   
-        ShaanMathur shaanmathur = new ShaanMathur("Shaan", "Mathur", 2, 1);
+        ShaanMathur shaanmathur = new ShaanMathur("Shaan", "Mathur", 2, 1, 2);
         addObject(shaanmathur, 2, 1);
         shaanmathur.sitDown();
         
-        KeenanKalra keenankalra = new KeenanKalra("Keenan", "Kalra", 2, 2);
+        KeenanKalra keenankalra = new KeenanKalra("Keenan", "Kalra", 2, 2, 3);
         addObject(keenankalra, 2, 2);
         keenankalra.sitDown();
         

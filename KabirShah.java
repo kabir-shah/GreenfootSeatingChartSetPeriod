@@ -18,12 +18,14 @@ public class KabirShah extends LoopGroup implements CSALearnedSoFar, NumberOfSib
     /**
      * Construct a KabirShah with a specific name and seat.
      */
-    public KabirShah(String f, String l, int r, int s) {
+    public KabirShah(String f, String l, int r, int s, int p) {
         firstName = f;
         lastName = l;
         
         myRow = r;
         mySeat = s;
+        
+        period = p;
         
         portraitFile = firstName.toLowerCase() + lastName.toLowerCase() + ".jpg";
         standingFile = firstName.toLowerCase() + lastName.toLowerCase() + "-standing.jpg"; 
