@@ -23,11 +23,12 @@ public class OlegBychenkov extends LoopGroup implements SpecialInterestOrHobby, 
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public OlegBychenkov(String f, String l, int r, int s) {
+    public OlegBychenkov(String f, String l, int r, int s, int p) {
         firstName=f;
         lastName=l;
         myRow=r;
         mySeat=s;
+        period = p;
         portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
@@ -44,6 +45,7 @@ public class OlegBychenkov extends LoopGroup implements SpecialInterestOrHobby, 
         lastName="Bychenkov";
         myRow=2;
         mySeat=3;
+        period=3;
         portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
