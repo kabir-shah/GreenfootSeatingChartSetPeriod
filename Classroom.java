@@ -29,7 +29,7 @@ public class Classroom extends World
 
      private void prepare()
     {
-        KabirShah kabirShah = new KabirShah("Kabir", "Shah", 1, 1);
+        KabirShah kabirShah = new KabirShah("Kabir", "Shah", 1, 1, 3);
         addObject(kabirShah, 1, 1);
         kabirShah.sitDown();
 
