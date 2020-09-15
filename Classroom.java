@@ -1,6 +1,6 @@
 import java.util.*;
 import greenfoot.*;
-import java.util.ArrayList;
+import java.util.List;
 /**
  * Sets the size of the world and creates the students
  *
@@ -9,7 +9,9 @@ import java.util.ArrayList;
  */
 public class Classroom extends World
 {
-    private ArrayList<Object> listo = new ArrayList<Object>();
+    // Hold a list of all students.
+    private List<Student> students;
+    
     /**
      * Constructor for objects of class Classroom.
      *
@@ -19,9 +21,12 @@ public class Classroom extends World
         // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
 
         super(10, 6, 130);
-
+        
+        addObject(new TogglePeriodBtn(), 0, 0);
         prepare();
+        setPeriod();
     }
+    
     /**
      * Prepare the world for the start of the program. That is: create the initial
      * objects and add them to the world.
@@ -52,5 +57,22 @@ public class Classroom extends World
         KeenanKalra keenankalra = new KeenanKalra("Keenan", "Kalra", 2, 2);
         addObject(keenankalra, 2, 2);
         keenankalra.sitDown();
+        
+        students = getObjects(Student.class);
+    }
+    
+    private void setPeriod() {
+        // Get the current period from the toggle button.
+        int currentPeriod = getObject(TogglePeriodBtn.class).getCurrentPeriod();
+
+        // Iterate through all students, removing them if they aren’t in the
+        // current period and adding them if they are.
+        for (Student student : students) {
+            if (student.getPeriod() == currentPeriod) {
+                addObject(student, student.myRow, student.mySeat);
+            } else {
+                removeObject(student);
+            }
+        }
     }
 }
